@@ -7,7 +7,7 @@ export default function WorldClock() {
   const [cityName, setCityName] = useState("");
   const [citySelected, setCitySelected] = useState(false);
   const [currentTime, setCurrentTime] = useState(moment());
-  
+
 
   useEffect(() => {
     const intervalTime = setInterval(() => {
@@ -16,6 +16,7 @@ export default function WorldClock() {
     return () => clearInterval(intervalTime);
   }, []);
 
+ 
 
   function showTimezone(event) {
     const name =
@@ -65,10 +66,10 @@ export default function WorldClock() {
         <div id="cityTimezone" className="row mt-3 border-bottom">
           <div className="col-6">
             <h3 className="mb-0">{cityName}</h3>
-            <p>{moment().tz(city).format("dddd Do MMMM YYYY")}</p>
+            <p>{currentTime.tz(city).format("dddd Do MMMM YYYY")}</p>
           </div>
           <div className="col-6">
-            <h3 className="mt-2">{moment().tz(city).format("HH:mm:ss ")}</h3>
+            <h3 className="mt-2">{currentTime.tz(city).format("HH:mm:ss ")}</h3>
           </div>
         </div>
       )}
@@ -88,35 +89,29 @@ export default function WorldClock() {
           <div className="row mt-3 border-bottom">
             <div className="col-6">
               <h3 className="mb-0">Dubai</h3>
-              <p>
-                {moment().tz("Asia/Dubai").format("dddd Do MMMM YYYY")}
-              </p>
+              <p>{currentTime.tz("Asia/Dubai").format("dddd Do MMMM YYYY")}</p>
             </div>
             <div className="col-6">
               <h3 className="mt-2">
-                {moment().tz("Asia/Dubai").format("HH:mm:ss ")}
+                {currentTime.tz("Asia/Dubai").format("HH:mm:ss ")}
               </h3>
             </div>
           </div>
           <div className="row mt-3 border-bottom">
             <div className="col-6">
               <h3 className="mb-0">Paris</h3>
-              <p>
-                {moment().tz("Europe/Paris").format("dddd Do MMMM YYYY")}
-              </p>
+              <p>{currentTime.tz("Europe/Paris").format("dddd Do MMMM YYYY")}</p>
             </div>
             <div className="col-6">
               <h3 className="mt-2">
-                {moment().tz("Europe/Paris").format("HH:mm:ss ")}
+                {currentTime.tz("Europe/Paris").format("HH:mm:ss ")}
               </h3>
             </div>
           </div>
           <div className="row mt-3 border-bottom">
             <div className="col-6">
               <h3 className="mb-0">Beijing</h3>
-              <p>
-                {moment().tz("Asia/Hong_Kong").format("dddd Do MMMM YYYY")}
-              </p>
+              <p>{moment().tz("Asia/Hong_Kong").format("dddd Do MMMM YYYY")}</p>
             </div>
             <div className="col-6">
               <h3 className="mt-2">
