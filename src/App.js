@@ -7,7 +7,12 @@ function App() {
       <WorldClock />
       <footer className="text-center">
         This project was coded by Charné Teichert and hosted as{" "}
-        <a href="https://github.com/CabsT/world_clock" target="_blank">
+        <a
+          href="https://github.com/CabsT/world_clock"
+          target="_blank"
+          className="text-decoration-none"
+          rel="noreferrer"
+        >
           open-sourced on Github
         </a>
       </footer>

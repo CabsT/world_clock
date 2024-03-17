@@ -9,3 +9,10 @@ body {
   max-width: 700px !important;
   margin-bottom: 0 !important;
 }
+
+button{
+  background-color: #ADE0F9!important;
+}
+button:hover{
+  background-color:#FCF1EC!important ;
+}
