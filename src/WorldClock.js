@@ -59,7 +59,7 @@ export default function WorldClock() {
           New York
         </option>
         <option name={currentLocation} value={moment.tz.guess()}>
-          Current Location
+          Current Location/Timezone
         </option>
       </select>
 
