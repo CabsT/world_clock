@@ -16,6 +16,7 @@ export default function WorldClock() {
     return () => clearInterval(intervalTime);
   }, []);
 
+  let currentLocation = (moment.tz.guess()).replace("_", " ").split("/")[1];
  
 
   function showTimezone(event) {
@@ -57,7 +58,7 @@ export default function WorldClock() {
         <option name="New York" value="America/New_York">
           New York
         </option>
-        <option name="Current Location" value={moment.tz.guess()}>
+        <option name={currentLocation} value={moment.tz.guess()}>
           Current Location
         </option>
       </select>
