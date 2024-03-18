@@ -69,7 +69,14 @@ export default function WorldClock() {
             <p>{currentTime.tz(city).format("dddd Do MMMM YYYY")}</p>
           </div>
           <div className="col-6">
-            <h3 className="mt-2">{currentTime.tz(city).format("HH:mm:ss ")}</h3>
+            <h3 className="mt-2">
+              <span className="align-middle fs-2">
+                {currentTime.tz(city).format("hh:mm:ss")}
+              </span>
+              <span className="ms-2 fs-6 align-middle">
+                {currentTime.tz(city).format("A")}
+              </span>
+            </h3>
           </div>
         </div>
       )}
@@ -78,7 +85,7 @@ export default function WorldClock() {
           <a
             href="/"
             onClick={resetCity}
-            className="link text-dark text-decoration-none"
+            className="text-dark text-decoration-none"
           >
             Go back
           </a>
@@ -93,18 +100,30 @@ export default function WorldClock() {
             </div>
             <div className="col-6">
               <h3 className="mt-2">
-                {currentTime.tz("Asia/Dubai").format("HH:mm:ss ")}
+                <span className="align-middle fs-2">
+                  {currentTime.tz("Asia/Dubai").format("hh:mm:ss")}
+                </span>
+                <span className="ms-2 fs-6 align-middle">
+                  {currentTime.tz("Asia/Dubai").format("A")}
+                </span>
               </h3>
             </div>
           </div>
           <div className="row mt-3 border-bottom">
             <div className="col-6">
               <h3 className="mb-0">Paris</h3>
-              <p>{currentTime.tz("Europe/Paris").format("dddd Do MMMM YYYY")}</p>
+              <p>
+                {currentTime.tz("Europe/Paris").format("dddd Do MMMM YYYY")}
+              </p>
             </div>
             <div className="col-6">
               <h3 className="mt-2">
-                {currentTime.tz("Europe/Paris").format("HH:mm:ss ")}
+                <span className="align-middle fs-2">
+                  {currentTime.tz("Europe/Paris").format("hh:mm:ss")}
+                </span>
+                <span className="ms-2 fs-6 align-middle">
+                  {currentTime.tz("Europe/Paris").format("A")}
+                </span>
               </h3>
             </div>
           </div>
@@ -115,7 +134,12 @@ export default function WorldClock() {
             </div>
             <div className="col-6">
               <h3 className="mt-2">
-                {moment().tz("Asia/Hong_Kong").format("HH:mm:ss ")}
+                <span className="align-middle fs-2">
+                  {moment().tz("Asia/Hong_Kong").format("hh:mm:ss")}
+                </span>
+                <span className="ms-2 fs-6 align-middle">
+                  {moment().tz("Asia/Hong_Kong").format("A")}
+                </span>
               </h3>
             </div>
           </div>
